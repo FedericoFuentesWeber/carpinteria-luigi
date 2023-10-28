@@ -19,7 +19,7 @@ const App = () => {
           <Route path='/' element={<Home />} />
         </Routes>
       </BrowserRouter>
-      <ItemListContainer greeting='Bienvenidos a la carpinteria de Luigi'/>
+      <ItemListContainer/>
     </div>
   )
 }
