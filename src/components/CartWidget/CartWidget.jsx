@@ -1,11 +1,10 @@
-import React from 'react'
-import './CartWidget.css'
-import cartIcon from '../../resources/shopping-cart.svg'
+import React from 'react';
+import './CartWidget.css';
 
 const CartWidget = () => {
     return (
         <div>
-            <img src={cartIcon} alt="Icono del carrito de compras" />
+            <img className='cart' src={"../img/shopping-cart.svg"} alt="Icono del carrito de compras" />
             <strong> 1 </strong>
         </div>
     )
