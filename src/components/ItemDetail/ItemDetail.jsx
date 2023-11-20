@@ -25,7 +25,12 @@ const ItemDetail = ({id, name, price, img, stock}) => {
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque, eum.</p>
 
         {
-          addAmount > 0 ? (<Link to="/cart">Finalizar compra</Link>) : 
+          addAmount > 0 ? (
+            <ul>
+              <li><Link to="/cart">Finalizar compra</Link></li>
+              <li><Link to="/">Seguir comprando</Link></li>
+            </ul>
+          ) : 
             (<Counter initialAmount={1} stock={stock} addFunction={amountHandler}/>)
         }
 
