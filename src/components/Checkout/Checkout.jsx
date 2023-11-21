@@ -2,6 +2,7 @@ import { useState, useEffect, useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 import { db } from "../../services/config";
 import { collection, addDoc, updateDoc, doc, getDoc } from "firebase/firestore";
+import './Checkout.css';
 
 const Checkout = () => {
     const [name, setName] = useState("");
@@ -73,34 +74,37 @@ const Checkout = () => {
     <div>
         <h2>Checkout</h2>
 
-        <form onSubmit={formHandler}>
-            {
-                cart.map(product => (
-                    <div key={product.item.id}>
-                        <p>{product.item.name} X {product.amount}</p>
-                        <p>{product.item.price}</p>
-                        <hr />
-                    </div>
-                ))
-            }
+        <form onSubmit={formHandler} className='form'>
+            <div className='products'>
+                {
+                    cart.map(product => (
+                        <div key={product.item.id}>
+                            <p>{product.item.name} X {product.amount}</p>
+                            <p>{product.item.price}</p>
+                            <hr />
+                        </div>
+                    ))
+                }
+            </div>
+            
 
-            <div>
+            <div className='formElem'>
                 <label htmlFor="">Nombre</label>
                 <input type="text" onChange={(e) => setName(e.target.value)} />
             </div>
-            <div>
+            <div className='formElem'>
                 <label htmlFor="">Apellido</label>
                 <input type="text" onChange={(e) => setLastName(e.target.value)} />
             </div>
-            <div>
+            <div className='formElem'>
                 <label htmlFor="">Telefono</label>
                 <input type="text" onChange={(e) => setPhone(e.target.value)} />
             </div>
-            <div>
+            <div className='formElem'>
                 <label htmlFor="">Email</label>
                 <input type="text" onChange={(e) => setEmail(e.target.value)} />
             </div>
-            <div>
+            <div className='formElem'>
                 <label htmlFor="">Confirmación de email</label>
                 <input type="text" onChange={(e) => setEmailConfirmation(e.target.value)} />
             </div>
@@ -109,7 +113,7 @@ const Checkout = () => {
                 error && <p style={{color:"red"}}> {error} </p>
             }
 
-            <button type="submit"> Confirmar compra </button>
+            <button type="submit" className='submitButton'> Confirmar compra </button>
 
             {
                 orderId && (<strong>Gracias por su compra, su número de orden es: {orderId}</strong>)
