@@ -1,0 +1,17 @@
+.linkProductos {
+    background-color: #d38c35;
+    color: black;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    border: none;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+}

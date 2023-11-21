@@ -1,4 +1,5 @@
 import { useState } from "react";
+import './Counter.css';
 
 const Counter = ({ initialAmount, stock, addFunction }) => {
     const [counter, setCounter] = useState(initialAmount);

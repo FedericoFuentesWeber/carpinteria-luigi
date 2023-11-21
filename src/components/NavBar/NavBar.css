@@ -5,6 +5,10 @@ header {
     border-bottom: 1px solid black;
 }
 
+a {
+    color: black;
+}
+
 li {
     display: inline-block;
     margin: 10px;

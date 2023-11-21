@@ -27,7 +27,7 @@ const ItemDetail = ({id, name, price, img, stock}) => {
 
         {
           addAmount > 0 ? (
-            <ul>
+            <ul className='buttonsPurchase'>
               <li><Link to="/cart">Finalizar compra</Link></li>
               <li><Link to="/">Seguir comprando</Link></li>
             </ul>
