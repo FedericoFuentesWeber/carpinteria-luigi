@@ -5,6 +5,7 @@ import PedidosPersonalizados from './components/PedidosPersonalizados/PedidosPer
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import { CartProvider } from './context/CartContext';
 import Cart from './components/Cart/Cart';
+import Checkout from './components/Checkout/Checkout';
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
             <Route path='/item/:itemId' element={ <ItemDetailContainer /> } />
             <Route path='/pedidos-personalizados' element={<PedidosPersonalizados />} />
             <Route path='/cart' element={<Cart />} />
+            <Route path='/checkout' element={<Checkout />} />
             <Route path='*' element={<h2>Sitio en construcción</h2>} />
           </Routes>
         </CartProvider>
